@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Markdown Demo Image</title>
+  <desc id="desc">Local demo image for markdown preview speed tests.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="55%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg)" rx="32" />
+  <circle cx="168" cy="132" r="56" fill="rgba(255,255,255,0.16)" />
+  <circle cx="800" cy="104" r="72" fill="rgba(255,255,255,0.12)" />
+  <circle cx="828" cy="404" r="110" fill="rgba(15,23,42,0.18)" />
+  <rect x="112" y="160" width="736" height="216" rx="28" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.28)" />
+  <text x="140" y="245" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700">Markdown Demo</text>
+  <text x="140" y="302" fill="#dbeafe" font-family="Arial, Helvetica, sans-serif" font-size="24">Local sample asset for fast same-origin preview.</text>
+  <text x="140" y="360" fill="#bfdbfe" font-family="Arial, Helvetica, sans-serif" font-size="20">No third-party image request is needed during page open.</text>
+</svg>

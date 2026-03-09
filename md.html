@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Markdown小助手</title>
+  <link rel="icon" type="image/x-icon" href="imgage/icon.ico" />
+  <link rel="preload" href="vendor/markdown-core.bundle.js?v=20260308-speed1" as="script">
+  <link rel="stylesheet" href="css/style.css?v=20260308-speed1">
+</head>
+
+<body>
+  <header class="app-header">
+    <div class="brand-block">
+      <div class="brand-title">Markdown小助手</div>
+      <div class="brand-subtitle" id="source-status">已加载内嵌默认内容</div>
+    </div>
+
+    <div class="toolbar">
+      <div class="toolbar-group toggle-group">
+        <button id="mobile-editor-btn" class="ghost mobile-toggle is-active" onclick="setMobileView('editor')">编辑</button>
+        <button id="mobile-preview-btn" class="ghost mobile-toggle" onclick="setMobileView('preview')">预览</button>
+        <button id="header-preview-btn" onclick="toggleWideMode()">预览模式</button>
+      </div>
+      <div class="toolbar-group action-group">
+        <button onclick="reloadMarkdownFile()" title="重置为默认 Markdown">重置</button>
+        <button id="btn-export-word" class="primary" onclick="exportWord()">导出 Word</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-area">
+    <section class="editor-pane" data-pane="editor">
+      <div class="editor-toolbar">
+        <button onclick="saveMarkdownFile()" title="保存 Markdown 文件">保存 .md</button>
+        <button onclick="clearEditor()" title="清空编辑器">一键清除</button>
+      </div>
+      <textarea id="code" placeholder="在这里直接输入 Markdown，右侧会实时渲染。"></textarea>
+    </section>
+
+    <section class="preview-pane" data-pane="preview">
+      <div class="preview-content markdown-body" id="preview"></div>
+    </section>
+  </div>
+
+  <section id="status-panel" class="status-panel" aria-hidden="false">
+    <div class="status-strip">
+      <div class="status-main"><span id="progress-percent">0%</span> <span id="progress-phase">初始化</span></div>
+      <div class="status-metrics" id="timing-summary">等待首次渲染</div>
+    </div>
+    <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+  </section>
+
+  <button id="exit-wide-btn" class="primary" onclick="toggleWideMode()">退出预览</button>
+
+  <script defer src="js/core-utils.js?v=20260308-speed1"></script>
+  <script defer src="js/app.js?v=20260308-speed1"></script>
+</body>
+
+</html>
